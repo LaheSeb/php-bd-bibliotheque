@@ -1,13 +1,14 @@
 <?php 
     include('conf.php');
     
-    $bdd = mysqli_connect (DBHOST, DBUSER,DBPASSWD, DBNAME);
+    $db = mysqli_connect (DBHOST, DBUSER,DBPASSWD, DBNAME);
+
     if (mysqli_connect_error()){
-        print('Erreur : ' . mysqli_connect_error());
+        $_SESSION['error']='Erreur : KO ! ' . mysqli_connect_error();
         exit();
     }
     else {
-        print ('Connextion à la base de données : OK !');
+        $_SESSION['message']='Connextion à la base de données : OK !';
     }
     
     
