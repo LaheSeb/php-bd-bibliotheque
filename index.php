@@ -11,7 +11,9 @@ session_start();
     $sql ='SELECT id_t, libelle FROM Type_de_livre;';
     $result = mysqli_query($db, $sql);
     //On ferme la connexion 
-    include_once('close.php')
+    include_once('close.php');
+    
+
     
     ?>
 <!DOCTYPE html>
@@ -45,7 +47,7 @@ session_start();
             <?php print ($_SESSION['message']);
             $_SESSION['message']="";?>
         </div> 
-        <?php}?>
+        <?php } ?>
                 <h1>Liste de types de Livres</h1>
                     <table class="table">
                     <thead>
@@ -59,11 +61,14 @@ session_start();
         <tr>
         <td><?php print($type['id_t']);    ?></td>
         <td><?php print($type['libelle']); ?></td>
+        <td><a href="details.php?id_t=<?php print($type['id_t']);?>">Voir</a>
         </tr>
         <?php
         }
         ?>
+
     </table>
+    <a href="ajouter.php"> ajouter un type </a>
     </div>
 </div>
     
