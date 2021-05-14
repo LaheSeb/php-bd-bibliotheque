@@ -23,6 +23,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/2696450378.js" crossorigin="anonymous"></script>
     <title>Liste des Types des Livres</title>
 </head>
 <body>
@@ -61,14 +62,16 @@ session_start();
         <tr>
         <td><?php print($type['id_t']);    ?></td>
         <td><?php print($type['libelle']); ?></td>
-        <td><a href="details.php?id_t=<?php print($type['id_t']);?>">Voir</a>
+        <td><a alt="Voir "class="btn btn-primary" href="details.php?id_t=<?php print($type['id_t']);?>"><i class="far fa-eye"></i></a> 
+            <a alt="Voir "class="btn btn-info" href="edit.php?id_t=<?php print($type['id_t']);?>" ><i class="fas fa-edit"> </i></a>
+            <a alt="Voir "class="btn btn-danger" href="delet.php?id_t=<?php print($type['id_t']);?>" ><i class="fas fa-trash"> </i></a></td>
         </tr>
         <?php
         }
         ?>
 
     </table>
-    <a href="ajouter.php"> ajouter un type </a>
+    <a title="lien" href="add.php"> ajouter un type </a>
     </div>
 </div>
     

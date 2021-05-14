@@ -1,6 +1,8 @@
 <html>
 <head>
   <title>	PHP - Ajouter n�6	</title>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
 <h1 align=center> PHP - Exemple n�6 </h1>
@@ -32,9 +34,9 @@ par un Programme sur le Serveur </h2>
 ?>
 
 </center>
-
+<p> <?php  print('$love');  ?> à bien été ajouter à la liste <P>
 <br>
-Ce programme n'a pas de param�tres.
+<a href='index.php'>Retour à la liste</a>
 <br>
 
 <hr>

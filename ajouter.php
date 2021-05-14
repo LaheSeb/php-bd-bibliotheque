@@ -9,6 +9,8 @@ include_once('close.php');
 	Type de livre :  <input type="text" name="love"><br>
 	
 	<input type="submit">
+	<br>
+<a href='index.html'>Retour</a>
 </form>
 
 
