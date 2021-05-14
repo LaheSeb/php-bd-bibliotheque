@@ -27,7 +27,7 @@ session_start();
     <title>Liste des Types des Livres</title>
 </head>
 <body>
-<div class="container">
+<main class="container">
     <div class="row">
     <?php
     if (!empty($_SESSION['error'])){
@@ -54,6 +54,8 @@ session_start();
                     <thead>
                         <th>ID</th>
                         <th>libellé</th>
+                        <th></th>
+                        <th></th>
                     </thead>
     
     
@@ -62,18 +64,18 @@ session_start();
         <tr>
         <td><?php print($type['id_t']);    ?></td>
         <td><?php print($type['libelle']); ?></td>
-        <td><a alt="Voir "class="btn btn-primary" href="details.php?id_t=<?php print($type['id_t']);?>"><i class="far fa-eye"></i></a> 
-            <a alt="Voir "class="btn btn-info" href="edit.php?id_t=<?php print($type['id_t']);?>" ><i class="fas fa-edit"> </i></a>
-            <a alt="Voir "class="btn btn-danger" href="delet.php?id_t=<?php print($type['id_t']);?>" ><i class="fas fa-trash"> </i></a></td>
+        <td><a alt="Voir "class="btn btn-primary"   href="details.php?id_t= <?php print($type['id_t']);?>"> <i class="far fa-eye">      </i></a> 
+            <a alt="Voir "class="btn btn-info"      href="edit.php?id_t=    <?php print($type['id_t']);?>" ><i class="fas fa-edit">     </i></a>
+            <a alt="Voir "class="btn btn-danger"    href="delet.php?id_t=   <?php print($type['id_t']);?>" ><i class="fas fa-trash">    </i></a></td>
         </tr>
         <?php
         }
         ?>
 
     </table>
-    <a title="lien" href="add.php"> ajouter un type </a>
+    <a class="btn btn-primary" href="add.php"> Ajouter un type </a>
     </div>
-</div>
+</main>
     
     
 </body>

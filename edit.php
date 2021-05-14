@@ -100,8 +100,8 @@ if ((isset($_GET['id_t'])) && !empty($_GET['id_t']))
             <input type="text" id="libelle" name="libelle" class="form-control" value="<?php print($label); ?>">
             </div>
             <p>
-                
-                <a href="index.php"> Retour à la liste </a><br>
+            
+                <a class ="btn btn-info" href="index.php"> Retour à la liste </a>
                 <button class="btn btn-primary"> Modifier</button>
                 
             </p>

@@ -63,8 +63,10 @@ if ((isset($_GET['id_t'])) && !empty($_GET['id_t']))
             <p>ID : <?php print($id) ;?> </p>
             <p>libelllé : <?php print($libelle); ?> </p>
             <p>
-            <a href='edit.php?id_t=<?php print($id);?>'>Modifier </a><br>
-            <a href="index.php"> Retour à la liste </a><br>
+            <a class ="btn btn-info" href="index.php"> Retour à la liste </a>
+            
+            <a class="btn btn-primary" href='edit.php?id_t=<?php print($id);?>'>Modifier </a><br>
+            
             </p>
             </section>
         </div>
