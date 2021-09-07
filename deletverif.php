@@ -48,7 +48,7 @@ if (  isset($_GET['id_t'])  )
   {
     //--- Suppression ...
     SupprimerBD ( $id ) ;
-    header ('Location: index.php');
+    
   }
 
 }

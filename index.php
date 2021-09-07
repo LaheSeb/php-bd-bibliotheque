@@ -66,7 +66,7 @@ session_start();
         <td><?php print($type['libelle']); ?></td>
         <td><a alt="Voir "class="btn btn-primary"   href="details.php?id_t= <?php print($type['id_t']);?>"> <i class="far fa-eye">      </i></a> 
             <a alt="Voir "class="btn btn-info"      href="edit.php?id_t=    <?php print($type['id_t']);?>" ><i class="fas fa-edit">     </i></a>
-            <a alt="Voir "class="btn btn-danger"    href="delet.php?id_t=   <?php print($type['id_t']);?>" ><i class="fas fa-trash">    </i></a></td>
+            <a alt="Voir "class="btn btn-danger"  onclick="return ConfirmSuppr()"  href="delet.php?id_t=   <?php print($type['id_t']);?>" ><i class="fas fa-trash">    </i></a></td>
         </tr>
         <?php
         }
@@ -76,7 +76,16 @@ session_start();
     <a class="btn btn-primary" href="add.php"> Ajouter un type </a>
     </div>
 </main>
-    
+    <script>
+        
+function ConfirmSuppr()
+{
+    return(confirm('Etes vous sur de vouloir supprimer ce Type de livre  '));
+}
+
+
+    </script>
+
     
 </body>
 </html>
